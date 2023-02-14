@@ -18,7 +18,7 @@ scroll-padding-top: var(--post-margin);
 
 body {
   background-image: url(https://static.tumblr.com/0du9egr/sYXrjjlj1/asset_3clouds.svg);
-  background-position: bottom right, center;
+  background-position: center;
   background-size: 300px, cover;
   font-family: "NeueHaas", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
   height: 100vh;
@@ -576,9 +576,3 @@ li.note .retags {
   100% {
     transform: skew(2deg, -2deg);
   }
-
-}
-/* spotify embed fix */
-.spotify_audio_player {
-  height: 352px!important;
-}

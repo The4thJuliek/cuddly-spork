@@ -1,0 +1,584 @@
+:root {
+--aside-width: 500px;
+--sidebar-padding: 15px;
+--post-width: 540px;
+--post-padding: 20px;
+--post-vertical-spacing: 15px;
+--post-margin: 20px;
+font-size: 16px;
+line-height: 1.5;
+scroll-padding-top: var(--post-margin);
+--midnights-navy: #455D8D;
+--midnights-purple: #AC9EB8;
+--midnights-white: #E8E7E2;
+--midnights-black: #333333;
+}
+
+
+
+body {
+  background-image: url(https://static.tumblr.com/0du9egr/sYXrjjlj1/asset_3clouds.svg);
+  background-position: bottom right, center;
+  background-size: 300px, cover;
+  font-family: "NeueHaas", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  height: 100vh;
+  background-attachment: fixed, fixed;
+  background-color: var(--midnights-navy);
+  background-repeat: no-repeat, no-repeat;
+}
+a {
+  color: var(--midnights-navy);
+  text-decoration: none;
+}
+.karma {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: var(--post-padding);
+}
+
+aside {
+  width: var(--aside-width);
+}
+
+.whomst {
+  display: flex;
+  align-items: center;
+  margin: var(--post-padding);
+  column-gap: var(--post-padding);
+}
+.lavender-haze {
+
+}
+.midnight-rain a {
+  text-decoration: none;
+  color: var(--midnights-purple);
+}
+
+#avatar {
+  width: 64px;
+  height: 64px;
+  border-style: solid;
+  border-color: var(--midnights-navy);
+  border-width: 5px;
+  margin-top: var(--sidebar-padding);
+  transition: border-color 1s;
+
+}
+
+#avatar:hover {
+  border-color: var(--midnights-purple);
+}
+
+#avatar.circle {
+  border-radius: 100px;
+}
+#avatar.square {
+  border-radius: 5px;
+}
+#title {
+  color: var(--midnights-purple);
+  font-size: 1.75rem;
+  font-family: "NeueHaas";
+  font-weight: bold;
+  overflow-wrap: break-word;
+  margin: 0;
+
+}
+#title:hover {
+  animation-name: vigilanteShit;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#description {
+  color: var(--midnights-white);
+}
+
+nav {
+  overflow: hidden;
+}
+
+nav #burgerlinks {
+  display: none;
+  background: var(--midnights-purple);
+  z-index: 9;
+  width: 50vw;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  overflow-y: scroll;
+}
+#heyburger {
+  padding: 60px 0;
+}
+
+#heyburger a {
+  color: var(--midnights-navy);
+  padding: var(--sidebar-padding) 60px;
+  text-decoration: none;
+  font-size: 1.8ch;
+  display: block;
+}
+
+.burger {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.burger:hover {
+
+}
+
+#heyburger a:hover {
+  background-color: var(--midnights-white);
+}
+#heyburger h2 {
+  padding-left: 60px;
+  color: var(--midnights-navy);
+}
+
+#members {
+  display: flex;
+  padding-left: 50px;
+  flex-wrap: wrap;
+}
+
+#members a {
+  padding: 10px;
+}
+
+#members a:hover {
+  background-color: transparent;
+}
+#members > a > img {
+  width: 64px;
+  height: 64px;
+}
+
+.close-button {
+  padding: 50px var(--sidebar-padding);
+  right: 0;
+  position: fixed;
+}
+.burger-foot {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  width: -webkit-fill-available;
+  bottom: 0;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: var(--midnights-navy);
+  padding: 40px 10px;
+  flex-wrap: wrap;
+}
+
+.results {
+  text-align: center;
+  color: var(--midnights-purple);
+}
+
+article {
+  margin: auto;
+  width: var(--post-width);
+  background-color: var(--midnights-white);
+  padding: var(--post-vertical-spacing) 0;
+  border-radius: 10px;
+  margin-top: var(--post-margin);
+  color: var(--midnights-black);
+  overflow-wrap: break-word;
+  border-color: var(--midnights-purple);
+  border-style: solid;
+  border-width: 3px;
+}
+article header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 var(--post-padding);
+  margin-bottom: var(--post-vertical-spacing);
+}
+
+article section.media {
+    padding: 0 var(--post-padding);
+}
+
+article section.body {
+    padding: 0 var(--post-padding);
+}
+
+.trail-content, .post-content {
+    padding: 0 var(--post-padding);
+}
+
+section.media > iframe {
+  max-width: 100%;
+}
+
+section.tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0.625rem;
+}
+
+
+
+.user {
+  display: flex;
+  align-items: center;
+}
+.user > a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--midnights-black);
+}
+
+.user > a:hover {
+  color: var(--midnights-purple);
+}
+.tumblelog a {
+  color: #fff;
+}
+
+.username {
+  margin-left: 1ch;
+  vertical-align: super;
+}
+.username a {
+  text-decoration: none;
+  color: var(--midnights-black);
+}
+
+.answerer {
+  text-decoration: none;
+  color: var(--midnights-black);
+}
+
+.answerer a:hover, .username a:hover {
+  color: var(--midnights-purple);
+}
+.ask-content {
+  margin: var(--post-vertical-spacing) 0;
+}
+.ask {
+  position: relative;
+  padding: var(--post-vertical-spacing) var(--post-padding);
+  background: rgb(69 93 141 / 15%);
+  border-radius: 5px;
+  margin-block-end: var(--post-margin);
+}
+
+.avatar {
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+}
+
+.reblog > figure >img {
+  width: 100%;
+  height: auto;
+}
+
+.reblog h2 {
+  text-align: left;
+  font-size: 1.5em;
+}
+
+.reblog-parent-name::before {
+    vertical-align: sub;
+    display: inline-block;
+    content: "\EA09";
+    font-family: "optica-icons";
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 1rem;
+  }
+
+
+
+/*
+header {
+  opacity: 60%;
+}
+*/
+header > a {
+  color: var(--midnights-black);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header > a:hover {
+  color: var(--midnights-purple);
+}
+
+figure > a > img {
+  width: 100%;
+}
+
+.post-content div.npf_row, .post div.npf_row, body div.npf_row {
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-top: 0;
+  overflow:hidden
+}
+
+
+.panel {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1vw;
+}
+.controls {
+  display: flex;
+}
+
+.controls .like_button, .controls .reblog_button {
+  margin-left: 15px;
+  position: relative;
+}
+
+.like-button {
+  padding-left: 10px;
+}
+footer > section > a {
+  text-decoration: none;
+  color: var(--midnights-black);
+  font-weight: bold;
+}
+article footer {
+  min-height: 25px;
+  color: var(--midnights-black);
+  padding: 0 var(--post-padding);
+}
+.tag-link {
+  margin-right: 1ch;
+}
+.bejeweled a {
+  color: var(--midnights-black);
+  font-weight: bold;
+  margin-right: 1ch;
+}
+time a {
+  color: var(--midnights-black);
+  font-weight: bold;
+  margin-right: 1ch;
+}
+
+.controls .like_button iframe,
+.controls .reblog_button svg {
+  position: relative;
+  z-index: 1;
+  opacity: 0.000000001;
+}
+.controls a {
+  color: var(--midnights-black);
+}
+
+.controls .like_button::before,
+.controls .reblog_button::before {
+  position: absolute;
+
+  font-family: "optica-icons";
+  font-size: 28px;
+  line-height: 1;
+}
+.controls .reblog_button::before {
+  content: "\EA08";
+}
+.controls .like_button::before {
+  content: "\EA04";
+}
+.controls .like_button.liked::before {
+  content: "\EA05";
+  color: #FF4930;
+}
+/* Notes */
+
+#notes {
+  display: flex;
+  flex-direction: column;
+  max-height: min(918px, calc(100vh - (var(--post-margin) * 2)));
+  overflow: hidden;
+  border-radius: 3px;
+  margin-top: var(--post-margin);
+
+  background-color: var(--midnights-white);
+  color: var(--midnights-white);
+}
+
+#notes > h3 {
+  flex-shrink: 0;
+  padding: var(--post-vertical-spacing) var(--post-padding);
+  border-bottom: 1px solid var(--midnights-navy);
+  margin: 0;
+
+  background-color: inherit;
+  font-size: 1rem;
+  text-align: center;
+}
+
+ol.notes {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: stretch;
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0.5ch 0;
+  margin: 0;
+
+  background-color: var(--midnights-white);
+  color: var(--midnights-black);
+  scrollbar-width: thin;
+  scrollbar-color: var(--midnights-navy);
+  font-size: .875rem;
+  list-style-type: none;
+}
+
+ol.notes a {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+li.note {
+  flex: none;
+  padding: 1ch 1.5ch;
+}
+
+li.note:not(.more_notes_link_container) {
+  position: relative;
+
+  padding-left: calc(1.5ch + 1.5rem + 1ch);
+}
+
+li.note.more_notes_link_container {
+  font-size: 1rem;
+}
+
+li.note a.more_notes_link {
+  color: var(--midnights-purple);
+}
+
+li.note span.notes_loading {
+  user-select: none;
+}
+
+li.note .avatar_frame,
+li.note > .avatar {
+  position: absolute;
+  left: 1.5ch;
+
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+li.note .avatar_frame::after {
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  padding: 2px;
+  border-radius: 100%;
+
+  color: white;
+  font-family: "optica-icons";
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 1;
+}
+
+li.note.like .avatar_frame::after { content: "\EA05"; background-color: #ff492f }
+li.note.reblog .avatar_frame::after { content: "\EA08"; background-color: #00cf35; }
+li.note.reply .avatar_frame::after { content: "\EA0A"; background-color: #00b8ff; }
+li.note.tip .avatar_frame::after { content: "\FF04"; background-color: #ff8a00; }
+li.note.original_post .avatar_frame::after { display: none; }
+
+li.note .avatar {
+  border-radius: 2px;
+}
+
+li.note > .avatar {
+  margin-right: calc(1ch - 0.25rem);
+}
+
+li.note span.action {
+  vertical-align: middle;
+}
+
+li.note.tip span.action:empty::after {
+  content: "Tipped";
+}
+
+li.note span.action a:first-of-type {
+  color: var(--midnights-purple);
+}
+
+li.note .answer_content {
+  display: block;
+}
+
+li.note blockquote,
+li.note .answer_content {
+  padding-left: 10px;
+  border-left: 3px solid var(--midnights-navy);
+  margin: 0.5ch 0 0;
+}
+
+li.note blockquote a,
+li.note .answer_content {
+  color: var(--midnights-black);
+  font-weight: normal;
+}
+
+li.note .retags {
+  margin-left: 26px;
+  margin-bottom: 0;
+}
+.npf_indented {
+  padding-left: var(--post-padding);
+  border-left: 3px solid var(--midnights-black);
+}
+.npf-link-block {
+  border: 2px solid var(--midnights-navy);
+}
+.npf-link-block.no-poster .title {
+  padding: 10px;
+  color: var(--midnights-white);
+}
+.npf-link-block.no-poster {
+  background-color: var(--midnights-navy);
+}
+#pagination {
+  display: none;
+}
+/* animations */
+@keyframes vigilanteShit {
+  0% {
+    transform: skew(-2deg, 2deg);
+  }
+  100% {
+    transform: skew(2deg, -2deg);
+  }
+
+}
+/* spotify embed fix */
+.spotify_audio_player {
+  height: 352px!important;
+}
